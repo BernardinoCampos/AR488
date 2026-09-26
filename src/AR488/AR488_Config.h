@@ -176,8 +176,11 @@
  * This will require the use of an additional GPIO pin to control
  * the read and write modes of the ICs.
  */
-//#define SN7516X
+#define SN7516X
 #ifdef SN7516X
+/*** ATmega328P board with SN75160B/SN75161B ***/
+  #define SN7516X_TE 6
+  // DC to REN (D3)
 /*** Jay Diddy B board ***/
 //  #define SN7516X_TE 6
 //  #define SN7516X_DC 13
