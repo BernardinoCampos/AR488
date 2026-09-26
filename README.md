@@ -1,5 +1,15 @@
 # AR488 Arduino GPIB Interface
 
+> **About this fork**
+>
+> This is a fork of [Twilight-Logic/AR488](https://github.com/Twilight-Logic/AR488), kept in sync with upstream. It exists to support a specific lab setup and the tooling built around it:
+>
+> - **Hardware:** an ATmega328P (Uno/Nano layout) interface with an SN75160B/SN75161B transceiver daughterboard. `src/AR488/AR488_Config.h` ships with `SN7516X` enabled, TE on D6 and DC driven by the REN line.
+> - **Test rig:** `tools/hp3488a_giga.py` exercises the interface against an HP 3488A Switch/Control Unit (identification, self-test, installed cards, relay open/close on every channel).
+> - **Roadmap:** a Raspberry Pi service exposing the GPIB bus through a REST API, and an intranet front-end to operate the connected instruments (HP 3488A, HP 6612C and others).
+>
+> Firmware behaviour is unchanged. For the upstream project, documentation and support, see the original repository. The original README follows.
+
 
 The AR488 GPIB controller is an Arduino-based controller for interfacing with IEEE488 GPIB devices via USB. This work was inspired by and has been based on the work originally released by Emanuele Girlando and has been released with his permission.
 
